@@ -229,7 +229,7 @@ void print_stats_to_terminal(LangStatData& ls_data, const uint8_t max_width) {
 
         std::cout << std::setw(6)
             << std::fixed << std::setprecision(2)
-            << item["percent"].get<float>()
+            << item["percent"].get<float>() * 100
             << "% \x1b[38;2;" << r << ';' << g << ';' << b << 'm'
             << item["name"].get<std::string>() << "\x1b[0m" << std::endl;
     }
